@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+
+  <h2>One-way data binding</h2>
+  <dl>
+    <dt>Name:</dt>
+    <dd>{{proName}}</dd>
+    <dt>Price</dt>
+    <dd>{{proPrice}}</dd>
+    <dt>Image</dt>
+    <dd>
+      <img [src]="ProImage" alt="Product Image">
+    <dl>Status</dl>
+    <dd>
+      <input type="checkbox" [checked]="inStock">
+    <span>{{inStock == true ?"Available":"Not Available"}}</span></dd>
+  </dl>
+
+</div>
+<div class="col-6 mt-4">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="ProImage" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{proName}}</h5>
+
+      <a href="https://getbootstrap.com/
+
+
+      " class="btn btn-primary">Click here for more info</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>

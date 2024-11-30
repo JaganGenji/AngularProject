@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row mt-4" >
+    <div class="col-2" >
+      <div class="btn-group-vertical w-100">
+        <button class="btn btn-primary w-100 mb-2" (click)="ViewClick('details')">Basic</button>
+        <button class="btn btn-primary w-100 mb-2" (click)="ViewClick('preview')">Preview</button>
+        <button class="btn btn-primary w-100 mb-2" (click)="ViewClick('offers')">Offers</button>
+      </div>
+      <div class="mt-4">
+  <select class="form-select" [(ngModel)]="ViewName">
+    <option value="details">Details</option>
+    <option value="preview">Preview</option>
+    <option value="offers">Offers</option>
+  </select>
+</div>
+
+
+    </div>
+    <div class="col-10 ">
+      <div [ngSwitch]="ViewName">
+        <div *ngSwitchCase="'details'">
+          <h3>Details are here</h3>
+        </div>
+        <div *ngSwitchCase="'preview'">
+          <h3>Preview are here</h3>
+        </div>
+        <div *ngSwitchCase="'offers'">
+          <h3>Offers are visible</h3>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

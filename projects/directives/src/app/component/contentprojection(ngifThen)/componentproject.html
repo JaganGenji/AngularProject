@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-2">
+      <nav>
+        <div (mouseover)="changeView('View1')">
+          <img src="https://m.media-amazon.com/images/I/71oWrfCTiqL._SX679_.jpg" alt="" height="70" width="70">
+
+        </div>
+        <div (mouseover)="changeView('View2')">
+          <img src="https://m.media-amazon.com/images/I/61WEKpDlkVL._SX679_.jpg" alt="" height="70" width="70">
+
+        </div>
+        <div (mouseover)="changeView('View3')">
+          <img src="https://m.media-amazon.com/images/I/81jpDQHcbZL._SX679_.jpg" alt="" height="70" width="70">
+
+        </div>
+        <div (mouseover)="changeView('View4')">
+          <img src="https://m.media-amazon.com/images/I/71708U5mylL._SX679_.jpg" alt="" height="70" width="70">
+
+        </div>
+        <div (mouseover)="changeView('View5')">
+          <img src="https://m.media-amazon.com/images/I/81rw84QQkFL._SX679_.jpg" alt="" height="70" width="70">
+
+        </div>
+
+      </nav>
+    </div>
+    <div class="col-4">
+      <div *ngIf="true;then thenblock"></div>
+      <ng-template #View1>
+        <img src="https://m.media-amazon.com/images/I/71oWrfCTiqL._SX679_.jpg" alt="" height="500" width="500">
+
+      </ng-template>
+      <ng-template #View2>
+        <img src="https://m.media-amazon.com/images/I/61WEKpDlkVL._SX679_.jpg" alt="" height="500" width="500">
+      </ng-template>
+      <ng-template #View3>
+        <img src="https://m.media-amazon.com/images/I/81jpDQHcbZL._SX679_.jpg" alt="" height="500" width="500">
+      </ng-template>
+      <ng-template #View4>
+        <img src="https://m.media-amazon.com/images/I/71708U5mylL._SX679_.jpg" alt="" height="500" width="500">
+
+      </ng-template>
+      <ng-template #View5>
+        <img src="https://m.media-amazon.com/images/I/81rw84QQkFL._SX679_.jpg" alt="" height="500" width="500">
+
+
+      </ng-template>
+
+    </div>
+  </div>
+</div>

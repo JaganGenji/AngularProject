@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Product Details</h2>
+  <dl>
+    <dt>Title</dt>
+    <dd>{{details.title}}</dd>
+    <dt>price</dt>
+    <dd>{{details.price}}</dd>
+    <dt>description</dt>
+    <dd>{{details.description}}</dd>
+    <dt>Image</dt>
+    <dd>
+    <img [src]="details.image" alt="" height="150" width="350">
+    </dd>
+    <dt>rating</dt>
+    <dd>
+      <span class="bi bi-star-fill"></span>
+      {{details.rating.rate}}-{{details.rating.count}}
+    </dd>
+  </dl>
+  <div class="mt-2">
+  <button (click)="previousClick()"class="btn btn-success me-2">
+    <span class="bi bi-chevron-left" ></span>
+  </button>
+  <button (click)="NextClick()" class="btn btn-success me-2">
+    <span class="bi bi-chevron-right"></span>
+  </button>
+  </div>
+
+</div>

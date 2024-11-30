@@ -1,0 +1,34 @@
+<div class="form-group">
+  <label for="">Select State</label>
+  <select  class="form-control"  name="" id=" " [(ngModel)]="selectedView" (ngModelChange)="changeView(selectedView)">
+    <option value="View1">view 1</option>
+    <option value="View2">view 2</option>
+    <option value="View3">view 3</option>
+    <option value="View4">view 4</option>
+    <option value="View5">view 5</option>
+  </select>
+</div>
+<div class="col-4">
+  <div *ngIf="true;then thenblock"></div>
+  <ng-template #View1>
+    <img src="https://m.media-amazon.com/images/I/71oWrfCTiqL._SX679_.jpg" alt="" height="500" width="500">
+
+  </ng-template>
+  <ng-template #View2>
+    <img src="https://m.media-amazon.com/images/I/61WEKpDlkVL._SX679_.jpg" alt="" height="500" width="500">
+  </ng-template>
+  <ng-template #View3>
+    <img src="https://m.media-amazon.com/images/I/81jpDQHcbZL._SX679_.jpg" alt="" height="500" width="500">
+  </ng-template>
+  <ng-template #View4>
+    <img src="https://m.media-amazon.com/images/I/71708U5mylL._SX679_.jpg" alt="" height="500" width="500">
+
+  </ng-template>
+  <ng-template #View5>
+    <img src="https://m.media-amazon.com/images/I/81rw84QQkFL._SX679_.jpg" alt="" height="500" width="500">
+
+
+  </ng-template>
+
+</div>
+

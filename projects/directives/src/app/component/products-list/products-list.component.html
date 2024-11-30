@@ -1,0 +1,53 @@
+<div class="container">
+
+    <div class="row mt-3">
+      <table class="table table-hover ">
+        <tr *ngFor="let items of menu">
+        <th>
+          {{items.category}}
+        </th>
+        <td>
+          <ul>
+            <li *ngFor="let product of items.products">{{product}}</li>
+          </ul>
+        </td>
+       </tr>
+
+      </table>
+    </div>
+    <div class="row mt-3">
+      <select (change)="oncategories()" class="form-select" [(ngModel)]="category">
+        <option  *ngFor="let item of menu">{{item.category}}</option>
+      </select>
+      <ul>
+        <li *ngFor="let products of product">{{products}}</li>
+      </ul>
+    </div>
+<div class="row mt-5">
+  <div class="col-12">
+  <table class="table table-hover " border="5">
+<thead>
+    <tr>
+      <th>Eid</th>
+      <th>EName</th>
+      <th>ESalary</th>
+      <th>Opertation</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let i of Emloyee" >
+       <td>{{i.Eno}}</td>
+       <td>{{i.Ename}}</td>
+       <td>{{i.ESalary}}</td>
+       <td>
+        <button type="button">delete</button>
+       </td>
+
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+</div>
+
+</div>
