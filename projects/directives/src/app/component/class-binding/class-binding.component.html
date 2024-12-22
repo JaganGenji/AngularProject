@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Class binding</h2>
+  <ul class="list-unstyled">
+    <li><input type="checkbox"ngModel #background="ngModel" name="" id="">Background</li>
+    <li><input type="checkbox"ngModel #Border="ngModel" name="" id="">Border</li>
+    <li><input type="checkbox"ngModel #Alin="ngModel" name="" id="">Align</li>
+
+  </ul>
+  <h2 style="background-color: aquamarine;">Jagan Mohan</h2>
+<h2 [ngClass]="{'bg-style':background.value,'text-styles':Alin.value,'border-style':Border.value}">Jagan Mohan</h2>
+</div>
+

@@ -1,0 +1,7 @@
+<div class="container">
+<dt>Username</dt>
+<dl>
+<input type="text" (keyup)="uservalidation($event)" name="" id=""><br>
+<h6 [ngClass]="{'text-danger':ispresent,'text-sucess':false}">{{usermessage}}</h6>
+</dl>
+</div>

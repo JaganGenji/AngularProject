@@ -1,0 +1,42 @@
+<div class="container" >
+  <h1>Style Binding</h1>
+  <h3 >BackGround Color</h3>
+  <select [(ngModel)]="Background" (click)="changebackground()">
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="Blue">Blue</option>
+    <option value="orange">Orange</option>
+  </select>
+  <h3>font color</h3>
+ <select [(ngModel)]="Textcolr" (click)="changeTextColor()">
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="Blue">Blue</option>
+  <option value="orange">Orange</option>
+ </select>
+ <div>
+  <p>Font Size</p>
+  1px<input type="range" name="" (click)="changefontSize()" [(ngModel)]="fontsize" min="1" max="50">50px
+ </div>
+ <div>
+  <p>Padding</p>
+  1px<input type="range" name="" (click)="changePadding()" [(ngModel)]="padding" min="1" max="50">50px
+ </div>
+ <button class="btn btn-primary" (click)="ApplyStryles()"> Click here</button>
+
+ <div [ngStyle]="styleObj" >Jagan mohan genji++++
+<h2>
+  {{names}}+++++{{hello.value}}
+</h2></div>
+</div>
+<div class="container">
+  <div class="row-2">
+    <label for="">name</label>
+    <input type="text" name="" [(ngModel)]="names" id="">
+    <input type="text" name="" id="" ngModel #hello="ngModel">
+
+  </div>
+
+
+</div>
+

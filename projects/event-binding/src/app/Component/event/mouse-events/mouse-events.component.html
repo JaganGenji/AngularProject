@@ -1,0 +1,15 @@
+<div class="container" (mousemove)="Mousemove($event)">
+<h1> Mouse Events</h1>
+<img [src]="img_sorce" alt="" width="200">
+<div class="btn-group">
+<button (mouseover)="Setcolor('black')" class="btn">Black</button>
+<button (mouseover)="Setcolor('green')" class="btn">green</button>
+<button (mouseover)="Setcolor('gold')" class="btn">gold</button>
+<button (mouseover)="Setcolor('green')" class="btn">Green</button>
+
+</div>
+<div style="height: 10px;">
+<img src="https://i.pinimg.com/originals/9e/81/9f/9e819f2bf0468a90b1b20fbd619cc01c.gif" [ngStyle]="place" height="100px" alt="">
+</div>
+
+</div>

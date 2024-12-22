@@ -592,6 +592,506 @@
           }
         }
       }
+    },
+    "Flipkart": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
+      "root": "projects/flipkart",
+      "sourceRoot": "projects/flipkart/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/flipkart",
+            "index": "projects/flipkart/src/index.html",
+            "browser": "projects/flipkart/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/flipkart/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/flipkart/public"
+              }
+            ],
+            "styles": [
+              "projects/flipkart/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/flipkart/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/flipkart/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "Flipkart:build:production"
+            },
+            "development": {
+              "buildTarget": "Flipkart:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/flipkart/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/flipkart/public"
+              }
+            ],
+            "styles": [
+              "projects/flipkart/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "EventBinding--no-standalone": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/event-binding--no-standalone",
+      "sourceRoot": "projects/event-binding--no-standalone/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/event-binding--no-standalone",
+            "index": "projects/event-binding--no-standalone/src/index.html",
+            "browser": "projects/event-binding--no-standalone/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/event-binding--no-standalone/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/event-binding--no-standalone/public"
+              }
+            ],
+            "styles": [
+              "projects/event-binding--no-standalone/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/event-binding--no-standalone/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/event-binding--no-standalone/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "EventBinding--no-standalone:build:production"
+            },
+            "development": {
+              "buildTarget": "EventBinding--no-standalone:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/event-binding--no-standalone/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/event-binding--no-standalone/public"
+              }
+            ],
+            "styles": [
+              "projects/event-binding--no-standalone/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "EventBinding": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
+      "root": "projects/event-binding",
+      "sourceRoot": "projects/event-binding/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/event-binding",
+            "index": "projects/event-binding/src/index.html",
+            "browser": "projects/event-binding/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/event-binding/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/event-binding/public"
+              }
+            ],
+            "styles": [
+              "projects/event-binding/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/event-binding/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/event-binding/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "EventBinding:build:production"
+            },
+            "development": {
+              "buildTarget": "EventBinding:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/event-binding/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/event-binding/public"
+              }
+            ],
+            "styles": [
+              "projects/event-binding/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "ComponentCommunication--no-standalone": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/component-communication--no-standalone",
+      "sourceRoot": "projects/component-communication--no-standalone/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/component-communication--no-standalone",
+            "index": "projects/component-communication--no-standalone/src/index.html",
+            "browser": "projects/component-communication--no-standalone/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/component-communication--no-standalone/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/component-communication--no-standalone/public"
+              }
+            ],
+            "styles": [
+              "projects/component-communication--no-standalone/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/component-communication--no-standalone/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/component-communication--no-standalone/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "ComponentCommunication--no-standalone:build:production"
+            },
+            "development": {
+              "buildTarget": "ComponentCommunication--no-standalone:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/component-communication--no-standalone/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/component-communication--no-standalone/public"
+              }
+            ],
+            "styles": [
+              "projects/component-communication--no-standalone/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "ComponentCommunication": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
+      "root": "projects/component-communication",
+      "sourceRoot": "projects/component-communication/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/component-communication",
+            "index": "projects/component-communication/src/index.html",
+            "browser": "projects/component-communication/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/component-communication/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/component-communication/public"
+              }
+            ],
+            "styles": [
+              "projects/component-communication/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/component-communication/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/component-communication/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "ComponentCommunication:build:production"
+            },
+            "development": {
+              "buildTarget": "ComponentCommunication:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/component-communication/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/component-communication/public"
+              }
+            ],
+            "styles": [
+              "projects/component-communication/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   },
   "cli": {

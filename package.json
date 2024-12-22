@@ -11,7 +11,12 @@
     "serve:ssr:ComponentsDemo1": "node dist/components-demo1/server/server.mjs",
     "serve:ssr:ComponentsDemo0": "node dist/components-demo0/server/server.mjs",
     "serve:ssr:directives-Demo": "node dist/directives-demo/server/server.mjs",
-    "serve:ssr:directives": "node dist/directives/server/server.mjs"
+    "serve:ssr:directives": "node dist/directives/server/server.mjs",
+    "serve:ssr:Flipkart": "node dist/flipkart/server/server.mjs",
+    "serve:ssr:EventBinding--no-standalone": "node dist/event-binding--no-standalone/server/server.mjs",
+    "serve:ssr:EventBinding": "node dist/event-binding/server/server.mjs",
+    "serve:ssr:ComponentCommunication--no-standalone": "node dist/component-communication--no-standalone/server/server.mjs",
+    "serve:ssr:ComponentCommunication": "node dist/component-communication/server/server.mjs"
   },
   "private": true,
   "dependencies": {
