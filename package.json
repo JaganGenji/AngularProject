@@ -16,7 +16,9 @@
     "serve:ssr:EventBinding--no-standalone": "node dist/event-binding--no-standalone/server/server.mjs",
     "serve:ssr:EventBinding": "node dist/event-binding/server/server.mjs",
     "serve:ssr:ComponentCommunication--no-standalone": "node dist/component-communication--no-standalone/server/server.mjs",
-    "serve:ssr:ComponentCommunication": "node dist/component-communication/server/server.mjs"
+    "serve:ssr:ComponentCommunication": "node dist/component-communication/server/server.mjs",
+    "serve:ssr:Pipesdemo": "node dist/pipesdemo/server/server.mjs",
+    "serve:ssr:ToDoList": "node dist/to-do-list/server/server.mjs"
   },
   "private": true,
   "dependencies": {

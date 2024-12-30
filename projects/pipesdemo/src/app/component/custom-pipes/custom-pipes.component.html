@@ -1,0 +1,25 @@
+<div class="container">
+<h1>Custom Pipe</h1>
+
+<h2>{{st}}</h2>
+<h3>{{st|reverse}}</h3>
+<table class="table table-hover">
+<thead>
+<tr>
+<th>Eid</th>
+<th>name</th>
+<th>Gender</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let item of data,let i index">
+<td>{{item.eid}}</td>
+<td>{{item.name|gender:item.gender}}</td>
+<td>{{item.gender}}</td>
+<td><button class="bi-trash" (click)="Delete(i)"></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>

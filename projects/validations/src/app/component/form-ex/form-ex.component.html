@@ -1,0 +1,23 @@
+<div class="container">
+<form #frmRegister="ngForm" (submit)="Register(frmRegister.value)" class="p-2" [ngClass]="{'invalid-style':frmRegister.invalid,'valid-style':frmRegister.valid}">
+<H2>Registration form</H2>
+
+<dl>
+<dt>Name</dt>
+<dd><input type="text" name="Uname" ngModel #Uname="ngModel" required="" ></dd>
+<dt>Age</dt>
+<dd><input type="number" name="age" ngModel #age="ngModel" min="18" max="40" ></dd>
+<dt>city</dt>
+<select name="city" ngModel #city="ngModel" required >
+<option value="delhi">delhi</option>
+<option value="mumbai">mumbai</option>
+
+</select>
+</dl>
+<dd>
+<button [disabled]="frmRegister.invalid"> Register</button>
+<button *ngIf="frmRegister.dirty">Save as  Draft</button>
+</dd>
+
+</form>
+</div>
